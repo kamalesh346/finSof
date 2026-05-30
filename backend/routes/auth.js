@@ -40,7 +40,7 @@ router.post('/login', async (req, res) => {
     if (user.role === 'AGENT') {
       const today = formatLocalDate();
       const [sessions] = await db.query(
-        'SELECT * FROM daily_sessions WHERE session_date = ? AND status = "OPEN"',
+        "SELECT * FROM daily_sessions WHERE session_date = ? AND status = 'OPEN'",
         [today]
       );
       if (!sessions.length) {

@@ -574,7 +574,7 @@ router.put('/accounts/:id/adjust-loan', auth(['ADMIN']), async (req, res) => {
 router.put('/accounts/:id/close', auth(['ADMIN']), async (req, res) => {
   try {
     const [result] = await db.query(
-      'UPDATE accounts SET status = "CLOSED" WHERE id = ?',
+      "UPDATE accounts SET status = 'CLOSED' WHERE id = ?",
       [req.params.id]
     );
     if (result.affectedRows === 0) {

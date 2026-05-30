@@ -153,7 +153,7 @@ router.post('/sync', auth(['AGENT']), async (req, res) => {
 
   const today = formatLocalDate();
   const [sessions] = await db.query(
-    'SELECT * FROM daily_sessions WHERE session_date = ? AND status = "OPEN"',
+    "SELECT * FROM daily_sessions WHERE session_date = ? AND status = 'OPEN'",
     [today]
   );
   if (!sessions.length) return res.status(403).json({ error: 'No open session' });

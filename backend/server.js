@@ -8,6 +8,7 @@ const logger = require('./utils/logger');
 const pool = require('./utils/db');
 
 const app = express();
+app.set('trust proxy', 1);
 
 /**
  * Middleware

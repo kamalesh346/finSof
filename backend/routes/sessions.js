@@ -21,7 +21,7 @@ router.post('/start', auth(['ADMIN']), async (req, res) => {
     );
     if (!existing.length) {
       await db.query(
-        'INSERT INTO daily_sessions (session_date, status, opened_by, closed_by, closed_at) VALUES (?, "OPEN", ?, NULL, NULL)',
+        "INSERT INTO daily_sessions (session_date, status, opened_by, closed_by, closed_at) VALUES (?, 'OPEN', ?, NULL, NULL)",
         [today, req.user.id]
       );
       return res.json({ success: true, message: 'Day started' });
@@ -33,7 +33,7 @@ router.post('/start', auth(['ADMIN']), async (req, res) => {
 
     await db.query(
       `UPDATE daily_sessions
-       SET status = "OPEN", opened_by = ?, opened_at = NOW(), closed_by = NULL, closed_at = NULL
+       SET status = 'OPEN', opened_by = ?, opened_at = NOW(), closed_by = NULL, closed_at = NULL
        WHERE session_date = ?`,
       [req.user.id, today]
     );
@@ -59,8 +59,8 @@ router.post('/close', auth(['ADMIN']), async (req, res) => {
     }
 
     await db.query(
-      `UPDATE daily_sessions SET status = "CLOSED", closed_by = ?, closed_at = NOW()
-       WHERE session_date = ? AND status = "OPEN"`,
+      `UPDATE daily_sessions SET status = 'CLOSED', closed_by = ?, closed_at = NOW()
+       WHERE session_date = ? AND status = 'OPEN'`,
       [req.user.id, today]
     );
 
