@@ -4091,3 +4091,23 @@
 [2026-05-27T17:03:55.924Z] INFO HTTP request completed method=GET path=/api/admin/reports/daily/2026-05-27 status=200 durationMs=9 ip=127.0.0.1
 [2026-05-27T17:04:56.212Z] INFO HTTP request completed method=GET path=/api/admin/reports/daily/2026-05-27 status=200 durationMs=12 ip=127.0.0.1
 [2026-05-27T17:05:55.905Z] INFO HTTP request completed method=GET path=/api/admin/reports/daily/2026-05-27 status=200 durationMs=11 ip=127.0.0.1
+[2026-05-30T04:24:14.616Z] INFO Database connected successfully
+[2026-05-30T04:24:14.619Z] INFO Server started port=5000 environment=development
+[2026-05-30T04:24:33.980Z] INFO Dummy user ensured for login
+[2026-05-30T04:24:33.984Z] INFO Login successful username=dummy userId=4 role=ADMIN
+[2026-05-30T04:24:33.985Z] INFO HTTP request completed method=POST path=/api/auth/login status=200 durationMs=125 ip=127.0.0.1
+[2026-05-30T04:24:34.039Z] INFO HTTP request completed method=GET path=/api/admin/reports/daily/2026-05-30 status=200 durationMs=8 ip=127.0.0.1
+[2026-05-30T04:24:34.060Z] INFO HTTP request completed method=GET path=/api/sessions/today status=200 durationMs=20 ip=127.0.0.1
+[2026-05-30T04:24:34.063Z] INFO HTTP request completed method=GET path=/api/admin/reports/daily/2026-05-30 status=200 durationMs=2 ip=127.0.0.1
+[2026-05-30T04:24:34.067Z] INFO HTTP request completed method=GET path=/api/sessions/today status=200 durationMs=3 ip=127.0.0.1
+[2026-05-30T04:24:39.270Z] INFO HTTP request completed method=GET path=/api/admin/agents status=200 durationMs=6 ip=127.0.0.1
+[2026-05-30T04:24:39.279Z] INFO HTTP request completed method=GET path=/api/admin/agents status=200 durationMs=13 ip=127.0.0.1
+[2026-05-30T04:24:40.749Z] INFO HTTP request completed method=GET path=/api/admin/customers status=200 durationMs=8 ip=127.0.0.1
+[2026-05-30T04:24:44.884Z] INFO HTTP request completed method=GET path=/api/admin/agents status=200 durationMs=3 ip=127.0.0.1
+[2026-05-30T04:24:44.885Z] INFO HTTP request completed method=GET path=/api/admin/agents status=200 durationMs=3 ip=127.0.0.1
+[2026-05-30T04:24:45.879Z] INFO HTTP request completed method=GET path=/api/admin/reports/daily/2026-05-30 status=200 durationMs=9 ip=127.0.0.1
+[2026-05-30T04:24:45.889Z] INFO HTTP request completed method=GET path=/api/admin/reports/history?page=1&pageSize=10&cacheSize=30 status=200 durationMs=17 ip=127.0.0.1
+[2026-05-30T04:24:45.896Z] INFO HTTP request completed method=GET path=/api/admin/reports/monthly-master/preview?month=2026-05 status=200 durationMs=17 ip=127.0.0.1
+[2026-05-30T04:24:45.899Z] INFO HTTP request completed method=GET path=/api/admin/reports/daily/2026-05-30 status=200 durationMs=24 ip=127.0.0.1
+[2026-05-30T04:24:45.904Z] INFO HTTP request completed method=GET path=/api/admin/reports/monthly-master/preview?month=2026-05 status=200 durationMs=31 ip=127.0.0.1
+[2026-05-30T04:24:45.907Z] INFO HTTP request completed method=GET path=/api/admin/reports/history?page=1&pageSize=10&cacheSize=30 status=200 durationMs=30 ip=127.0.0.1
