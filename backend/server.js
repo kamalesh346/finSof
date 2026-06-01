@@ -13,18 +13,27 @@ app.set('trust proxy', 1);
 /**
  * Middleware
  */
-app.use(
-  cors({
-    origin: function (origin, callback) {
-      if (process.env.NODE_ENV === 'production') {
-        callback(null, process.env.FRONTEND_URL || true);
-      } else {
+app.use(cors({
+  origin: function (origin, callback) {
+    if (process.env.NODE_ENV === 'production') {
+      const allowed = process.env.FRONTEND_URL;
+      if (!origin || !allowed) {
         callback(null, true);
+      } else {
+        const originClean = origin.replace(/\/$/, "");
+        const allowedClean = allowed.replace(/\/$/, "");
+        if (originClean === allowedClean) {
+          callback(null, true);
+        } else {
+          callback(null, false);
+        }
       }
-    },
-    credentials: true
-  })
-);
+    } else {
+      callback(null, true);
+    }
+  },
+  credentials: true
+}));
 
 app.use(express.json({ limit: '5mb' }));
 
